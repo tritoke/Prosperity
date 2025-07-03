@@ -20,7 +20,7 @@ impl Program {
                 Op::Min(a, b) => vars[a].min(vars[b]),
                 Op::Neg(n) => -vars[n],
                 Op::Sqrt(n) => vars[n].sqrt(),
-                Op::Square(n) => vars[n].powi(2),
+                Op::Square(n) => vars[n] * vars[n],
                 Op::Const(c) => c,
             };
         }
